@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands\Bot;
 
+use Illuminate\Support\Facades\Log;
 use Telegram\Bot\Commands\Command;
 
 class StartCommand extends Command
@@ -19,6 +20,7 @@ class StartCommand extends Command
 
     public function handle()
     {
+        Log::info(__METHOD__, ['lolol']);
         # username from Update object to be used as fallback.
         $fallbackUsername = $this->getUpdate()->getMessage()->from->username;
 

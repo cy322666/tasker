@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands\Bot;
 
-use Illuminate\Console\Command;
+use Telegram\Bot\Commands\Command;
 
 class HelpCommand extends Command
 {
@@ -18,7 +18,7 @@ class HelpCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected string $description = 'Command description';
 
     /**
      * Execute the console command.

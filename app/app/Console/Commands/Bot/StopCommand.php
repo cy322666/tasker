@@ -2,27 +2,16 @@
 
 namespace App\Console\Commands\Bot;
 
-use Illuminate\Console\Command;
+use Telegram\Bot\Commands\Command;
 
 class StopCommand extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'app:stop-command';
+    protected string $name = 'stop';
+    protected string $pattern = '{username} {age: \d+}';
+    protected string $description = 'Start Command to get you started';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Command description';
+    protected string $signature = 'app:stop-command';
 
-    /**
-     * Execute the console command.
-     */
     public function handle()
     {
         //

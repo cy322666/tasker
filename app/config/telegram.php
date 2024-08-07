@@ -43,9 +43,21 @@ return [
             /*
              * @see https://core.telegram.org/bots/api#update
              */
-            'allowed_updates' => null,
+            'allowed_updates' => null,//message_reaction
             'commands' => [
-                //Acme\Project\Commands\MyTelegramBot\BotCommand::class
+//                StartCommand::class,
+                'start',
+                'stop',
+                'help',
+                'add',
+//                'remove',
+//                'projects',
+//                'stop'  => StopCommand::class,
+//                'help'  => HelpCommand::class,
+//                'add'   => AddTaskCommand::class,
+//
+//                'remove'   => RemoveCommand::class,
+//                'projects' => ProjectsCommand::class,
             ],
         ],
     ],
@@ -98,7 +110,7 @@ return [
     | Default: https://api.telegram.org/bot
     |
     */
-    'base_bot_url' => null,
+    'base_bot_url' => 'https://api.telegram.org/bot',
 
     /*
     |--------------------------------------------------------------------------
@@ -131,7 +143,13 @@ return [
     |
     */
     'commands' => [
-        HelpCommand::class,
+        'start'  => StartCommand::class,
+        'stop'  => StopCommand::class,
+        'help'  => HelpCommand::class,
+        'add'   => AddTaskCommand::class,
+
+//        'remove'   => RemoveCommand::class,
+//        'projects' => ProjectsCommand::class,
     ],
 
     /*
@@ -221,8 +239,8 @@ return [
          'help'  => HelpCommand::class,
          'add'   => AddTaskCommand::class,
 
-         'remove'   => RemoveCommand::class,
-         'projects' => ProjectsCommand::class,
+//         'remove'   => RemoveCommand::class,
+//         'projects' => ProjectsCommand::class,
         // 'status' => Acme\Project\Commands\StatusCommand::class,
     ],
 ];
