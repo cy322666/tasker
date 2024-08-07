@@ -45,8 +45,8 @@ return [
              */
             'allowed_updates' => null,//message_reaction
             'commands' => [
-//                StartCommand::class,
-                'start',
+                StartCommand::class,
+//                'start',
                 'stop',
                 'help',
                 'add',
@@ -143,7 +143,7 @@ return [
     |
     */
     'commands' => [
-        'start'  => StartCommand::class,
+        'start' => StartCommand::class,
         'stop'  => StopCommand::class,
         'help'  => HelpCommand::class,
         'add'   => AddTaskCommand::class,
@@ -175,40 +175,6 @@ return [
            'commmon' => [
                 Acme\Project\Commands\TodoCommand::class,
                 Acme\Project\Commands\TaskCommand::class,
-           ],
-        */
-
-        /* // Group Type: 2
-           'subscription' => [
-                'start', // Shared Command Name.
-                'stop', // Shared Command Name.
-           ],
-        */
-
-        /* // Group Type: 3
-            'auth' => [
-                Acme\Project\Commands\LoginCommand::class,
-                Acme\Project\Commands\SomeCommand::class,
-            ],
-
-            'stats' => [
-                Acme\Project\Commands\UserStatsCommand::class,
-                Acme\Project\Commands\SubscriberStatsCommand::class,
-                Acme\Project\Commands\ReportsCommand::class,
-            ],
-
-            'admin' => [
-                'auth', // Command Group Name.
-                'stats' // Command Group Name.
-            ],
-        */
-
-        /* // Group Type: 4
-           'myBot' => [
-                'admin', // Command Group Name.
-                'subscription', // Command Group Name.
-                'status', // Shared Command Name.
-                'Acme\Project\Commands\BotCommand' // Full Path to Command Class.
            ],
         */
     ],

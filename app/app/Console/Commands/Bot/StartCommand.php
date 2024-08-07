@@ -20,10 +20,10 @@ class StartCommand extends Command
 
     public function handle()
     {
-        Log::info(__METHOD__, ['lolol']);
         # username from Update object to be used as fallback.
         $fallbackUsername = $this->getUpdate()->getMessage()->from->username;
 
+        dd($this->getUpdate()->getMessage());
         $age = $this->argument('age');
 
         # Get the username argument if the user provides,
@@ -33,8 +33,6 @@ class StartCommand extends Command
             $fallbackUsername
         );
 
-        $this->replyWithMessage([
-            'text' => "Hello {$username}! Welcome to our bot :) {$age}"
-        ]);
+        $this->replyWithMessage(['text' => 'Авторизация в боте прошла успешно']);
     }
 }

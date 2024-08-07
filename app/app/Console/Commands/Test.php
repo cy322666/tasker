@@ -28,10 +28,14 @@ class Test extends Command
      */
     public function handle()
     {
+        Telegram::bot('tasker')->sendMessage([
+           'chat_id' => 340662906,
+            'text' => 'sdasd',
+        ]);
 //        dd('https://api.telegram.org/bot'.env('TELEGRAM_BOT_TOKEN').'/getWebhookInfo');
 //        dd('https://api.telegram.org/bot'.env('TELEGRAM_BOT_TOKEN').'/setWebhook?url='.env('TELEGRAM_WEBHOOK_URL'));
-        $response = Telegram::bot('tasker')->setWebhook(['url' => env('TELEGRAM_WEBHOOK_URL')]);
+//        $response = Telegram::bot('tasker')->setWebhook(['url' => env('TELEGRAM_WEBHOOK_URL')]);
 
-        dd($response);
+//        dd($response);
     }
 }
