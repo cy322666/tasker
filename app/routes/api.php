@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 use Telegram\Bot\Laravel\Facades\Telegram;
 
 
-Route::post('hook', function (Request $request) {
+Route::post('hook', function () {
 
-    Log::info(__METHOD__, $request->toArray());
+//    Log::info(__METHOD__, $request->toArray());
 
     $update = Telegram::commandsHandler(true);
 

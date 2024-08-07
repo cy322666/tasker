@@ -47,9 +47,10 @@ return [
             'commands' => [
                 StartCommand::class,
 //                'start',
-                'stop',
-                'help',
-                'add',
+//                'stop',
+//                HelpCommand::class,
+            StopCommand::class
+//                'add',
 //                'remove',
 //                'projects',
 //                'stop'  => StopCommand::class,
@@ -142,15 +143,7 @@ return [
     | will respond with a list of available commands and description.
     |
     */
-    'commands' => [
-        'start' => StartCommand::class,
-        'stop'  => StopCommand::class,
-        'help'  => HelpCommand::class,
-        'add'   => AddTaskCommand::class,
-
-//        'remove'   => RemoveCommand::class,
-//        'projects' => ProjectsCommand::class,
-    ],
+    'commands' => [],
 
     /*
     |--------------------------------------------------------------------------
@@ -195,18 +188,5 @@ return [
     | Think of this as a central storage, to register, reuse and maintain them across all bots.
     |
     */
-    'shared_commands' => [
-        /*
-         *   'admin' => App\Telegram\Commands\AdminCommand::class,
-        'info' => App\Telegram\Commands\InfoCommand::class,
-         */
-         'start' => StartCommand::class,
-         'stop'  => StopCommand::class,
-         'help'  => HelpCommand::class,
-         'add'   => AddTaskCommand::class,
-
-//         'remove'   => RemoveCommand::class,
-//         'projects' => ProjectsCommand::class,
-        // 'status' => Acme\Project\Commands\StatusCommand::class,
-    ],
+    'shared_commands' => [],
 ];
